@@ -3,16 +3,17 @@
 #include <stdio.h>
 
 /**
- * main - checks for lowercase character
+ * _islower - checks for lowercase character
+ * @c: integer to be checked
  *
- * Return 0 Always
+ * Return: 1 if uppercase,0 otherwise
  */
 int _islower(int c)
 {
 
-        if (c >= 'a' && c <= 'z')
-        {
-                return 1;
-        }
-        return(0);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	return (0);
 }

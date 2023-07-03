@@ -2,18 +2,19 @@
 #include <ctype.h>
 
 /**
- * main - A function that checks for alphabetic character.
+ * _isalpha - A function that checks for alphabetic character.
+ * @c: integer to be checked
  *
- * Return 0 Always
+ * Return: 1 if c is letter, 0 otherwise
  */
 int _isalpha(int c)
 {
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        {
-                return 1;
-        }
-        else
-        {
-                return (0);
-        }
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

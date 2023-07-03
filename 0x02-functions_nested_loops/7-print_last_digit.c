@@ -4,16 +4,17 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the last digit of a number.
+ * print_last_digit - Prints the last digit of a number.
+ * @i: number
  *
- * Return 0 Always
+ * Return: i
  */
 int print_last_digit(int i)
 {
-        if (i < 0)
-        {
-                i *= -1;
-        }
-        _putchar((i % 10) + 48);
-        return(i % 10);
+	if (i < 0)
+	{
+		i *= -1;
+	}
+	_putchar((i % 10) + 48);
+	return (i % 10);
 }

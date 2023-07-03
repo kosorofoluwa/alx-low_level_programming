@@ -3,18 +3,19 @@
 #include "main.h"
 
 /**
- * main - Computes the absolute value of an integer.
+ * _abs - Computes the absolute value of an integer.
+ * @i: integer
  *
- * Return 0 Always
+ * Return: i
  */
 int _abs(int i)
 {
-        if (i < 0)
-        {
-                return -i;
-        }
-        else
-        {
-                return i;
-        }
+	if (i < 0)
+	{
+		return (-i);
+	}
+	else
+	{
+		return (i);
+	}
 }
