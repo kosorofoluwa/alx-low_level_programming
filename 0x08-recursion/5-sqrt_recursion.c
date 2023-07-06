@@ -1,32 +1,34 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: number to be inputed
- *
- * Return: square root of number
+ * operator - returns square root of a number.
+ * @n: input number to be checked
+ * @c: iterator
+ * Return: square root
+ */
+int operator(int n, int c)
+{
+	if (c % (n / c) == 0)
+	{
+		if (c * (n / c) == n)
+			return (c);
+		else
+			return (-1);
+	}
+	return (0 + operator(n, c + 1));
+}
+/**
+ * _sqrt_recursion - returns th square root of a number.
+ * @n: input numberto be checked
+ * Return: natural square root.
  */
 int _sqrt_recursion(int n)
 {
-	return (_recursion_com(n, 1));
-}
-
-/**
- * _recursion_com - calculates the square root
- * @n: number
- * @sr: square root
- *
- * Return: square root
- */
-int _recursion_com(int n, int sr)
-{
-		if (sr * sr == n)
-		{
-			return (sr);
-		}
-		if (sr * sr > n)
-		{
-			return (-1);
-		}
-		return (_recursion_com(n, sr + 1));
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (0);
+	if (n == 1)
+		return (1);
+	return (operator(n, 2));
 }
