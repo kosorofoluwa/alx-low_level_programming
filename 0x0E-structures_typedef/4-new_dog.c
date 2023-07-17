@@ -6,10 +6,10 @@ char *_strcopy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
 
 /**
- * _strlen - Finds the length of a string.
- * @str: The string to be measured.
+ * _strlen - determines the length of a string.
+ * @str: The string to be determined.
  *
- * Return: The length of the string.
+ * Return: The length of string.
  */
 int _strlen(char *str)
 {
@@ -22,12 +22,11 @@ int _strlen(char *str)
 }
 
 /**
- * _strcopy - Copies a string pointed to by src, including the
- *            terminating null byte, to a buffer pointed to by dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
+ * _strcopy - Copies a string
+ * @dest: stores a string
+ * @src: source of the string.
  *
- * Return: The pointer to dest.
+ * Return: pointer.
  */
 char *_strcopy(char *dest, char *src)
 {
@@ -51,33 +50,33 @@ char *_strcopy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggo;
+	dog_t *dogg;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	doggo = malloc(sizeof(dog_t));
-	if (doggo == NULL)
+	dogg = malloc(sizeof(dog_t));
+	if (dogg == NULL)
 		return (NULL);
 
-	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (doggo->name == NULL)
+	dogg->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (dogg->name == NULL)
 	{
-		free(doggo);
+		free(dogg);
 		return (NULL);
 	}
 
-	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (doggo->owner == NULL)
+	dogg->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dogg->owner == NULL)
 	{
-		free(doggo->name);
-		free(doggo);
+		free(dogg->name);
+		free(dogg);
 		return (NULL);
 	}
 
-	doggo->name = _strcopy(doggo->name, name);
-	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner, owner);
+	dogg->name = _strcopy(dogg->name, name);
+	dogg->age = age;
+	dogg->owner = _strcopy(dogg->owner, owner);
 
-	return (doggo);
+	return (dogg);
 }
