@@ -1,11 +1,10 @@
 #include "variadic_functions.h"
 
 /**
+ * sum_them_all - sums all its parameters
+ * @n: last parameter before ellipsis
  *
- *
- *
- *
- *
+ * Return: sum
  */
 int sum_them_all(const unsigned int n, ...)
 {
